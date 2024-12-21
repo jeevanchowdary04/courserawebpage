@@ -1,0 +1,60 @@
+# Install required packages if not already installed
+install.packages("leaflet")
+install.packages("rmarkdown")
+
+# Load the packages
+library(leaflet)
+---
+title: "My Interactive Map"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction
+
+Welcome to my interactive map! This is a map created using the `Leaflet` package in R. The map shows the location of several major cities around the world.
+
+# Leaflet Map
+
+```{r}
+# Load the leaflet package
+library(leaflet)
+
+# Create a map centered on the world
+map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = c(-74.0060, 139.6917, -0.1276, 2.3522),
+             lat = c(40.7128, 35.6895, 51.5074, 48.8566),
+             popup = c("New York", "Tokyo", "London", "Paris"))
+
+# Display the map
+map
+
+
+---
+title: "My Interactive Map"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction
+
+Welcome to my interactive map! This is a map created using the `Leaflet` package in R. The map shows the location of several major cities around the world.
+
+# Leaflet Map
+
+```{r}
+# Load the leaflet package
+library(leaflet)
+
+# Create a map centered on the world
+map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = c(-74.0060, 139.6917, -0.1276, 2.3522),
+             lat = c(40.7128, 35.6895, 51.5074, 48.8566),
+             popup = c("New York", "Tokyo", "London", "Paris"))
+
+# Display the map
+map
